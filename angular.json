@@ -88,9 +88,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js"
+              
+            ]
           }
         },
         "lint": {
@@ -119,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "machorale"
+    }
+  },
+  "defaultProject": "machorale",
+  "cli": {
+    "analytics": "008066a1-799f-4fff-aa94-3c78c05670ae"
+  }
 }

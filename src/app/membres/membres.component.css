@@ -1,0 +1,27 @@
+ 
+
+            .card{
+
+                box-shadow: 8px 8px 8px 8px #7777;
+                margin-top:10px!important;
+                
+            }
+
+            .card:hover {
+                    box-shadow: 15px 15px 15px 15px #7777;
+                }
+                
+           
+          
+            a:hover{text-decoration:none;}
+
+            .y-0{margin-top:0;}
+       
+
+     .logo_reseaux_sociaux{
+    position:fixed;
+   
+    top: 30%;
+    bottom:70%;
+    color:red;
+          }   

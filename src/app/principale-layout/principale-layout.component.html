@@ -1,0 +1,36 @@
+<app-hearder></app-hearder>
+<router-outlet></router-outlet>
+
+<style>
+    .logo{
+   position:fixed;
+  
+   top: 30%;
+   bottom:70%;
+   color:red;
+         }   
+  
+  .scrolltop{
+   position:fixed;
+   right:0px;
+   bottom:0px;
+   color:red;
+  }
+  
+  
+  </style>
+   
+  <a  class="btn btn-danger btn-xs scrolltop" title="Allez en haut rapidement" style="font-size:2em;" onclick="scrollToTop()">
+        <i class="fa fa-arrow-up" ></i>
+  </a>
+  
+  
+  <div  class="logo" >
+  <a class="btn  btn-sm text-light" title="Allez sur notre page Linkedin"  style="font-size:0.6em;background-color:#4169E1;">   <i class="fa fa-linkedin" ></i></a><br/>
+  <a class="btn  btn-sm text-light" title="Allez sur notre page Twitter"  style="font-size:0.6em;background-color:#00BFFF;" >   <i class="fa fa-twitter" ></i></a><br/>
+  <a class="btn  btn-sm text-light" title="Allez sur notre page Instagram"  style="font-size:0.6em;background-color:#FF69B4;" >   <i class="fa fa-instagram" ></i></a><br/>
+  <a class="btn btn-primary btn-sm text-light" title="Allez sur notre page Facebook" style="font-size:0.8em;">   <i class="fa fa-facebook" ></i></a><br/>
+     <a class="btn btn-danger text-light btn-sm" title="Allez sur notre chaine Youtube"  style="font-size:0.6em;">   <i class="fa fa-youtube" ></i></a>
+  </div>
+  
+<app-footer></app-footer>

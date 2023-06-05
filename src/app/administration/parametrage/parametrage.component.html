@@ -1,0 +1,1256 @@
+
+<style>
+ tbody td{font-size:0.6em!important; font-weight:bold;}
+ thead td{font-size:0.8em!important; font-weight:bold;}
+ .card{margin-bottom :10px;;}
+</style>
+
+
+
+                    <div class="znav-white znav-container sticky-top navbar-elixir" id="znav-container">
+                        <div class="container">
+                        
+                       <!-- nav -->
+                        
+                                                <section class="background-11 ">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                       
+                                                  <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6">
+
+                                                   <div class="card ">
+
+                                                    <div class="card-heading text-center">
+                                                    <h5>  Enregistrez les pays</h5>
+                                                    </div>
+                                                     
+                                                    <div class="card-body">
+                                                       
+                                                            <form class="" id="pays_form">
+                                                           
+
+                                                            <div class="col-md-12">
+                                                                <label for="nom_pays" class="control-label">Nom du pays</label>
+                                                                <div class="form-group">
+                                                                <input type="text" name="nom_pays"  class="form-control" id="nom_pays" />
+                                                                <span class="erreur_nom_pays" style="color:red;" id="erreur_nom_pays"></span>
+                                                            </div>
+                                                             </div>
+
+                                                             <div class="col-md-12">
+                                                                <label for="code_pays" class="control-label">Continent</label>
+                                                              <div class="form-group">
+                                                                <select  name="continent"  class="form-control" id="continent" >
+                                                                <option value="">---------------------------</option>
+                                                                  <option value="Afrique">Afrique</option>
+                                                                  <option value="Asie">Asie</option>
+                                                                  <option value="Amerique du sud">Amerique du sud</option>
+                                                                  <option value="Amerique du nord">Amerique du nord</option>
+                                                                  <option value="Antarctique">Antarctique</option>
+                                                                  <option value="Europe">Europe</option>
+                                                                  <option value="Océanie">Océanie</option>
+                                                                  
+                                                                 </select>
+                                                                <span class="erreur_continent" style="color:red;" id="erreur_continent"></span>
+                                                              </div>
+                                                            </div>
+                                                            
+                                                            <div class="col-md-12">                                                             
+                                                                <button   class="btn btn-primary col-md-12 btn_pays">Enregistrer</button>
+                                                            </div>
+                                                            </form>
+
+                                                    </div>
+                                                 </div>
+                                               </div><!--/.formulaire ville-->
+                                                 
+
+                                                   
+                                               <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6">
+                                                    <div class="card ">
+
+                                                            <div class="card-heading  text-center">
+                                                                 <h5> Enregistrez Ville/commune</h5>
+                                                            </div>
+                                                            
+                                                            <div class="card-body">
+                                                            <form class="" id="ville_form">
+                                                            
+
+                                                            <div class="col-md-12">
+                                                                        <label for="nom_ville" class="control-label">Nom de la ville</label>
+                                                                        <div class="form-group">
+                                                                            <input type="text" name="nom_ville" value="" class="form-control" id="nom_ville" />
+                                                                            <span class="erreur_nom_ville" style="color:red;" id="erreur_nom_ville"></span>
+                                                             </div>
+                                                             </div>
+
+                                                             <div class="col-md-12">
+                                                                        <label for="localisati" class="control-label">Dans quel pays?</label>
+                                                                        <div class="form-group">
+                                                                          
+                                                                            <select name="id_pays_ville" id="id_pays_ville" class="form-control">
+                                                                            <option value="">------------------------</option>
+                                                                           
+                                                                                    <option value=""> </option>
+                                                                            
+                                                                            </select>
+                                                                            <span class="erreur_pays" style="color:red;" id="erreur_pays"></span>
+                                                                </div>
+                                                               </div>
+
+                                                               <div class="col-md-12">                                                             
+                                                                <button   class="btn btn-primary col-md-12 btn_ville">Enregistrer</button>
+                                                            </div>
+                                                            </form>
+                                                           
+                                                            </div>
+                                                     </div>
+                                                     </div><!--/.formulaire pays-->
+                                                    
+                                                     
+                                                   
+                                                   <!-- <div class="col-3">
+                                                    <div class="card">
+
+                                                            <div class="card-heading  text-center">
+                                                                 <h5> Enregistrez les ethnies</h5>
+                                                            </div>
+                                                            
+                                                            <div class="card-body">
+                                                            <form class="" id="ethnie_form">
+                                                            
+
+                                                            <div class="col-md-12">
+                                                                        <label for="localisation" class="control-label">Ethnie</label>
+                                                                        <div class="form-group">
+                                                                            <input type="text" name="nom_ethnie" value="" class="form-control" id="nom_ethnie" />
+                                                                            <span class="erreur_nom_ethnie" style="color:red;" id="erreur_nom_ethnie"></span>
+                                                             </div>
+                                                             </div>
+
+                                                             <div class="col-md-12">
+                                                                        <label for="description_ethnie" class="control-label">Description</label>
+                                                                        <div class="form-group">
+                                                                            <Textarea  name="description_ethnie"  class="form-control" id="description_ethnie" ></textarea>
+                                                                            <span class="erreur_description_ethnie" style="color:red;" id="erreur_description_ethnie"></span>
+                                                                </div>
+                                                               </div>
+
+                                                               <div class="col-md-12">                                                             
+                                                                <button   class="btn btn-primary col-md-12 btn_ethnie">Enregistrer</button>
+                                                            </div>
+                                                            </form>
+                                                           
+                                                            </div>
+                                                     </div>
+                                                     </div>/.formulaire ethnies-->
+                                                    
+                                                     <hr><br>
+                                                     <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6">
+                                                    <div class="card ">
+
+                                                            <div class="card-heading  text-center">
+                                                                 <h5> Enregistrez les tribus</h5>
+                                                            </div>
+                                                            
+                                                            <div class="card-body">
+                                                            <form class="">
+                                                            
+
+                                                            <div class="col-md-12">
+                                                                        <label for="nom_tribu" class="control-label">Nom de la tribu</label>
+                                                                        <div class="form-group">
+                                                                            <input type="text" name="nom_tribu" value="" class="form-control" id="nom_tribu" />
+                                                                            <span class="erreur_nom_tribu" style="color:red;" id="erreur_nom_tribu"></span>
+                                                             </div>
+                                                             </div>
+
+                                                             
+                                                             <div class="col-md-12">
+                                                                        <label for="description_tribu" class="control-label">Description de la tribu</label>
+                                                                        <div class="form-group">
+                                                                            <textarea  name="description_tribu"  class="form-control" id="description_tribu" ></textarea>
+                                                                            <span class="erreur_description_tribu" style="color:red;" id="erreur_description_tribu"></span>
+                                                                </div>
+                                                               </div>
+
+                                                               <div class="col-md-12">                                                             
+                                                                <button   class="btn btn-primary col-md-12 btn_tribu">Enregistrer</button>
+                                                            </div>
+
+                                                            </form>
+                                                           
+                                                            </div>
+                                                     </div>
+                                                     </div><!--/.formulaire pays-->
+
+                                                     <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6">
+                                                    <div class="card ">
+
+                                                            <div class="card-heading  text-center">
+                                                                 <h5> Enregistrez les Departements</h5>
+                                                            </div>
+                                                            
+                                                            <div class="card-body">
+                                                            <form class="" id="departement_form">
+                                                            
+
+                                                              <div class="col-md-12">
+                                                                        <label for="designation_departement" class="control-label">Designation du departement</label>
+                                                                        <div class="form-group">
+                                                                            <input type="text" name="designation_departement"  class="form-control" id="designation_departement" />
+                                                                            <span class="erreur_designation_departement" style="color:red;" id="erreur_designation_departement"></span>
+                                                                         </div>
+                                                               </div>
+
+                                                                <div class="col-md-12">
+                                                                        <label for="description_departement" class="control-label">Description </label>
+                                                                        <div class="form-group">
+                                                                            <textarea name="description_departement"  class="form-control" id="description_departement" ></textarea>
+                                                                            <span class="erreur_description_departement" style="color:red;" id="erreur_description_departement"></span>
+                                                                </div>
+                                                                
+                                                               </div>
+
+                                                               <div class="col-md-12">                                                             
+                                                                <button   class="btn btn-primary col-md-12 btn_departement">Enregistrer</button>
+                                                               </div>
+
+                                                            </form>
+                                                           
+                                                            </div>
+                                                     </div>
+                                                     </div><!--/.formulaire pays-->
+                                                    
+
+                                                     <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6">
+                                                    <div class="card ">
+
+                                                            <div class="card-heading  text-center">
+                                                                 <h5> Enregistrez les comités</h5>
+                                                            </div>
+                                                            
+                                                            <div class="card-body">
+                                                            <form class="" id="departement_form">
+                                                            
+
+                                                            <div class="col-md-12">
+                                                                        <label for="designation_comite" class="control-label">Designation du comité</label>
+                                                                        <div class="form-group">
+                                                                            <input type="text" name="designation_comite"  class="form-control" id="designation_comite" />
+                                                                            <span class="erreur_designation_comite" style="color:red;" id="erreur_designation_comite"></span>
+                                                             </div>
+                                                             </div>
+                                                             
+
+                                                             <div class="col-md-12">
+                                                                        <label for="id_dep" class="control-label">Departement du comité</label>
+                                                                <select name="id_dep" id="id_dep" class="form-control">
+                                                                                    <option value="">--------------------- </option>
+                                                                                    
+                                                                                     <option value=" "></option>
+                                                                                    
+                                                                                   
+                                                                            </select>
+                                                                            <span class="erreur_id_dep" style="color:red;" id="erreur_id_dep"></span>
+                                                              </div>
+
+                                                                <div class="col-md-12">
+                                                                        <label for="description_departement" class="control-label"> Description du comité </label>
+                                                                        <div class="form-group">
+                                                                            <textarea name="description_comite"  class="form-control" id="description_comite" ></textarea>
+                                                                            <span class="erreur_description_comite" style="color:red;" id="erreur_description_comite"></span>
+                                                                </div>
+                                                               </div>
+
+                                                               <div class="col-md-12">                                                             
+                                                                <button   class="btn btn-primary col-md-12 btn_comite">Enregistrer</button>
+                                                               </div>
+
+                                                            </form>
+                                                           
+                                                            </div>
+                                                     </div>
+                                                     </div><!--/.formulaire pays-->
+
+
+                                                    
+                                                     <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6">
+                                                    <div class="card ">
+
+                                                            <div class="card-heading  text-center">
+                                                                 <h5> Enregistrez les eglises</h5>
+                                                            </div>
+                                                            
+                                                            <div class="card-body">
+                                                            <form class="" id="eglise_form">
+                                                            
+
+                                                            <div class="col-md-12">
+                                                                        <label for="nom_eglise" class="control-label">Nom de l'eglise</label>
+                                                                        <div class="form-group">
+                                                                            <input type="text" name="nom_eglise" value="" class="form-control" id="nom_eglise" />
+                                                                            <span class="erreur_nom_eglise" style="color:red;" id="erreur_nom_eglise"></span>
+                                                             </div>
+                                                             </div>
+
+                                                             <div class="col-md-12">
+                                                                        <label for="dependence" class="control-label">Statut</label>
+                                                                        <div class="form-group">
+                                                                          
+                                                                        <select name="statut" id="statut" class="form-control">
+                                                                                    
+                                                                        <option value="">---------------------------------------- </option>
+                                                                        <option value="Assemblée">Autonome</option>
+                                                                                    <option value="Famille d'honneur">Annexe</option>
+                                                                                    <option value="Cellule d'honneur">Cellule </option>
+                                                                                
+                                                                            </select>
+                                                                            <span class="erreur_statut" style="color:red;" id="erreur_statut"></span>
+                                                                </div>
+                                                               </div>
+
+                                                               <div class="col-md-12">
+                                                                        <label for="dependance_eglise" class="control-label">Depend de quelle eglise mère ?</label>
+                                                                        <div class="form-group">
+                                                                          
+                                                                            <select name="dependance_eglise" id="dependance_eglise" class="form-control">
+                                                                                    <option value="">---------------------------------------- </option>
+                                                                                  
+                                                                                    
+                                                                                    <option value=" "> </option>
+                                                                                 
+                                                                                   
+                                                                            </select>
+                                                                            <span class="erreur_Dependante_eglise" style="color:red;" id="erreur_Dependante_eglise"></span>
+                                                                </div>
+                                                               </div>
+                                                              
+                                                             <div class="col-md-12">
+                                                                        <label for="id_ville_eglise" class="control-label">Située dans quelle Ville / commune ?</label>
+                                                                        <div class="form-group">
+                                                                          
+                                                                            <select name="id_ville_eglise" id="id_ville_eglise" class="form-control">
+                                                                            <option value="">---------------------------------------- </option>
+                                                                                    
+                                                                                    <option value=""></option>
+                                                                                   
+                                                                            </select>
+                                                                            <span class="erreur_id_ville_eglise" style="color:red;" id="erreur_id_ville_eglise"></span>
+                                                                </div>
+                                                               </div>
+
+                                                             <div class="col-md-12">
+                                                                        <label for="description_eglise" class="control-label">Description</label>
+                                                                        <div class="form-group">
+                                                                            <textarea name="description_eglise" value="" class="form-control" id="description_eglise" ></textarea>
+                                                                            <span class="erreur_description_eglise" style="color:red;" id="erreur_description_eglise"></span>
+                                                                </div>
+                                                               </div>
+
+                                                               <div class="col-md-12">                                                             
+                                                                <button   class="btn btn-primary col-md-12 btn_eglise">Enregistrer</button>
+                                                                </div>
+                                                            </form>
+                                                           
+                                                            </div>
+                                                     </div>
+                                                     </div><!--/.formulaire pays-->
+                                                    
+                                                     
+                                                     <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6">
+                                                    <div class="card ">
+
+                                                            <div class="card-heading  text-center">
+                                                                 <h5> Enregistrez les professions</h5>
+                                                            </div>
+                                                            
+                                                            <div class="card-body">
+                                                            <form class="" id="profession_form">
+                                                            
+
+                                                            <div class="col-md-12">
+                                                                        <label for="designation_profession" class="control-label">Designation de la profession</label>
+                                                                        <div class="form-group">
+                                                                            <input type="text" name="designation_profession" class="form-control" id="designation_profession" />
+                                                                            <span class="erreur_designation_profession" style="color:red;" id="erreur_designation_profession"></span>
+                                                             </div>
+                                                             </div>
+
+                                                              
+
+                                                               <div class="col-md-12">                                                             
+                                                                <button   class="btn btn-primary col-md-12 btn_profession">Enregistrer</button>
+                                                               </div>
+
+                                                            </form>
+                                                           
+                                                            </div>
+                                                     </div>
+                                                     </div><!--/.formulaire pays-->
+
+
+
+                                                     <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6">
+                                                    <div class="card ">
+
+                                                            <div class="card-heading  text-center">
+                                                                 <h5>Enregistrez zones d'habitation</h5>
+                                                            </div>
+                                                            
+                                                            <div class="card-body">
+                                                            <form class="" id="profession_form">
+                                                            
+
+                                                            <div class="col-md-12">
+                                                            <label for="designation_profession" class="control-label">Zone d'habitation</label>
+                                                            <div class="form-group">
+                                                                <input type="text" name="zone_habitation" class="form-control" id="zone_habitation" />
+                                                                <span class="erreur_zone_habitation" style="color:red;" id="erreur_zone_habitation"></span>
+                                                             </div>
+                                                             </div>
+
+                                                             <div class="col-md-12">
+                                                             <div class="form-group">
+                                                             <select name="id_eglise_zone" id="id_eglise_zone" class="form-control">
+                                                                            <option value="">---------------------------------------- </option>
+                                                                            
+                                                                                    <option value=" "> </option>
+                                                                                  
+                                                                            </select>
+                                                                            <span class="erreur_id_eglise_zone" style="color:red;" id="erreur_id_eglise_zone"></span>
+                                                                 </div>
+                                                                 </div>
+
+
+                                                                 <div class="col-md-12">
+                                                                        <label for="description_zone" class="control-label">Description</label>
+                                                                        <div class="form-group">
+                                                                            <textarea  name="description_zone"  class="form-control" id="description_zone" ></textarea>
+                                                                            <span class="erreur_description_zone" style="color:red;" id="erreur_description_zone"></span>
+                                                                </div>
+                                                               </div>
+                                                               <div class="col-md-12">                                                             
+                                                                <button   class="btn btn-primary col-md-12 btn_zone">Enregistrer</button>
+                                                               </div>
+
+                                                            </form>
+                                                           
+                                                            </div>
+                                                     </div>
+                                                     </div><!--/.formulaire Zone d'habitation-->
+                                                    
+                                                     <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6">
+                                                    <div class="card ">
+
+                                                            <div class="card-heading  text-center">
+                                                                 <h5> Enregistrez hotels</h5>
+                                                            </div>
+                                                            
+                                                            <div class="card-body">
+                                                            <form class="" id="hotel_form">
+                                                            
+
+                                                            <div class="col-md-12">
+                                                                        <label for="nom_hotel" class="control-label">Nom de l'hotel</label>
+                                                                        <div class="form-group">
+                                                                            <input type="text" name="nom_hotel" value="" class="form-control" id="nom_hotel" />
+                                                                            <span class="erreur_nom_hotel" style="color:red;" id="erreur_nom_hotel"></span>
+                                                             </div>
+                                                             </div>
+                                                                
+                                                             <div class="col-md-12">
+                                                                        <label for="id_ville_hotel" class="control-label">Ville / commune </label>
+                                                                        <div class="form-group">
+                                                                          
+                                                                            <select name="id_ville_hotel" id="id_ville_hotel" class="form-control">
+                                                                            <option value="">---------------------------------------- </option>
+                                                                                   
+                                                                                    <option value=""> </option>
+                                                                                    
+                                                                            </select>
+                                                                            <span class="erreur_id_ville_hotel" style="color:red;" id="erreur_id_ville_hotel"></span>
+                                                                </div>
+                                                               </div>
+
+                                                               <div class="col-md-12">
+                                                                        <label for="confort" class="control-label">Confort</label>
+                                                                        <div class="form-group">
+                                                                          
+                                                                            <select name="confort" id="confort" class="form-control">
+                                                                            <option value="">---------------------------------------- </option>
+                                                                            <option value="5 etoiles">5 etoiles</option>
+                                                                            <option value="4 etoiles">4 etoiles</option>
+                                                                            <option value="3 etoiles">3 etoiles</option>
+                                                                            <option value="2 etoiles">2 etoiles</option>
+                                                                            <option value="1 etoiles">1 etoiles</option>
+                                                                            </select>
+                                                                            <span class="erreur_confort" style="color:red;" id="erreur_confort"></span>
+                                                                </div>
+                                                               </div>
+
+                                                             <div class="col-md-12">
+                                                                        <label for="description_hotel" class="control-label">Description de l'hotel</label>
+                                                                        <div class="form-group">
+                                                                            <textarea  name="description_hotel" value="" class="form-control" id="description_hotel" ></textarea>
+                                                                            <span class="erreur_description_hotel" style="color:red;" id="erreur_description_hotel"></span>
+                                                                </div>
+                                                               </div>
+
+                                                               <div class="col-md-12">                                                             
+                                                                <button  class="btn btn-primary col-md-12 btn_hotel">Enregistrer</button>
+                                                               </div>
+
+                                                            </form>
+                                                           
+                                                            </div>
+                                                     </div>
+                                                     </div><!--/.formulaire pays-->
+                                                    
+
+                                                  
+
+
+                                                     <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6">
+                                                    <div class="card ">
+
+                                                            <div class="card-heading  text-center">
+                                                                 <h5> Enregistrez les chambres</h5>
+                                                            </div>
+                                                            
+                                                            <div class="card-body">
+                                                            <form class="" id="hotel_form">
+                                                            
+
+                                                          
+                                                                
+                                                             <div class="col-md-12">
+                                                                        <label for="id_ville_hotel" class="control-label">Hôtel *</label>
+                                                                        <div class="form-group">
+                                                                          
+                                                                            <select name="id_chambre_hotel" id="id_chambre_hotel" class="form-control">
+                                                            
+                                                                                  
+                                                                                    <option value=""> </option>
+                                                                                   
+                                                                            </select>
+                                                                            <span class="erreur_id_chambre_hotel" style="color:red;" id="erreur_id_chambre_hotel"></span>
+                                                                </div>
+                                                               </div>
+
+                                                   
+                                                               <div class="col-md-12">
+                                                                        <label for="batiment" class="control-label">Batiment</label>
+                                                                        <div class="form-group">
+                                                                          
+                                                                            <select name="batiment" id="batiment" class="form-control">
+                                                                            <option value="">---------------------------------------- </option>
+                                                                            <option value="Résidence de L'Ermitage">Résidence de L'Ermitage</option>
+                                                                            <option value="Résidence de la Côte A rez de chaussée">Résidence de la Côte A rez de chaussée</option>
+                                                                            <option value="Résidence de la Côte B">Résidence de la Côte B</option>
+                                                                            <option value="Résidence de la Côte C">Résidence de la Côte C</option>
+                                                                            <option value="Résidence de la Chapelle">Résidence de la Chapelle</option>
+                                                                            <option value="Résidence du parc">Résidence du parc</option>
+                                                                            <option value="Résidence du Lac">Résidence du Lac</option>
+                                                                            <option value="La Tanière 1">La Tanière 1</option>
+                                                                            <option value="bergerie">bergerie</option>
+                                                                            <option value="refuge 1">refuge 1</option>
+                                                                            <option value="refuge 2">refuge 2</option>
+                                                                            <option value="Résidence de la Chapelle">Résidence de la Chapelle</option>
+                                                                            <option value="Réfectoire">Réfectoire</option>
+                                                                            
+
+                                                                           </select>                          
+                                                                            <span class="erreur_formule" style="color:red;" id="erreur_formule"></span>
+                                                                </div>
+                                                               </div>            
+                                                                           <div class="col-md-12">
+                                                                        <label for="designation_chambre" class="control-label">Desgination Chambre *</label>
+                                                                        <div class="form-group">
+                                                                            <input type="text" name="designation_chambre" class="form-control" id="designation_chambre" />
+                                                                            <span class="erreur_designation_chambre" style="color:red;" id="erreur_designation_chambre"></span>
+                                                             </div>
+                                                             </div>    
+                                                               
+                                                               
+
+                                                               <div class="col-md-12">
+                                                                        <label for="confort" class="control-label">Formule *</label>
+                                                                        <div class="form-group">
+                                                                          
+                                                                            <select name="formule" id="formule" class="form-control">
+                                                                            <option value="">---------------------------------------- </option>
+                                                                            <option value="Ventilé">Ventilée</option>
+                                                                            <option value="Climatisée">Climatisée</option>
+                                                                            <option value="Couple ventilé">Couple ventilée</option>
+                                                                            <option value="Couple climatisée">Couple climatisée</option>
+                                                                            </select>
+                                                                            <span class="erreur_formule" style="color:red;" id="erreur_formule"></span>
+                                                                </div>
+                                                               </div>
+                                                                   
+                                                               <div class="col-md-12">
+                                                                <label for="nb_place" class="control-label">Nombre de place *</label>
+                                                                <div class="form-group">
+                                                                <input type="number" name="nb_place" class="form-control" id="nb_place"/>
+                                                                <span class="erreur_nb_place" style="color:red;" id="erreur_nb_place"></span>
+                                                             </div>
+                                                             </div>
+
+                                                               <div class="col-md-12">
+                                                                        <label for="prix_unitaire_ttc" class="control-label">Prix par personne *</label>
+                                                                        <div class="form-group">
+                                                                        <input type="text" name="prix_unitaire_ttc" value="" class="form-control" id="prix_unitaire_ttc" />
+                                                                        <span class="erreur_prix_unitaire_ttc" style="color:red;" id="erreur_prix_unitaire_ttc"></span>
+                                                             </div>
+                                                             </div>
+                                                                
+
+                                                            
+                                                             <div class="col-md-12">
+                                                                        <label for="description_chambre" class="control-label">Description de la chambre</label>
+                                                                        <div class="form-group">
+                                                                            <textarea  name="description_chambre" value="" class="form-control" id="description_hotel" ></textarea>
+                                                                            <span class="erreur_description_chambre" style="color:red;" id="erreur_description_hotel"></span>
+                                                                </div>
+                                                               </div>
+
+                                                               <div class="col-md-12">                                                             
+                                                                <button  class="btn btn-primary col-md-12 btn_chambre">Enregistrer</button>
+                                                               </div>
+
+                                                            </form>
+                                                           
+                                                            </div>
+                                                     </div>
+                                                     </div><!--/.formulaire pays-->
+                                                    
+
+                                                     
+                                                    
+
+                                                </div><!--/.row-->
+                                                    </div><!--/.container-->
+                                                
+                                                </section>
+                                
+<script>
+/* <![CDATA[ */ 
+/*
+|-----------------------------------------------------------------------
+|  jQuery Toggle Script by Matt - skyminds.net
+|-----------------------------------------------------------------------
+|
+| Affiche/cache le contenu d'un bloc une fois qu'un lien est cliqué.
+|
+*/
+
+
+
+// On attend que la page soit chargée 
+jQuery(document).ready(function()
+{
+   // On cache la zone de texte
+   jQuery('.toggl').hide();
+   // toggle() lorsque le lien avec l'ID #toggler est cliqué
+   var i;
+   i=0;
+   $('a.toggler').click(function()
+  {  
+       if(i==0){
+        $('a.toggler').html('<span style="color:red;"><br>Reduire');
+        if ($(this).text()!="SUITE..."){
+        jQuery('.toggle').toggle(400);
+        i+=1;
+        return false;
+        }
+
+      }else{
+          i-=1;
+          jQuery('.toggle').toggle(400);
+        //jQuery('#toggle').hide();
+      $('a.toggler').html('<span style="color:red;">SUITE...</span>');
+      return false;
+      }
+   });
+});
+/* ]]> */ 
+</script>
+
+
+<script>
+    jQuery(document).ready(function() {
+    jQuery(".more").hide();
+    jQuery('.button-read-less').hide();
+    jQuery('.button-read-more').click(function () {
+        jQuery(this).closest('.less').addClass('active');
+        jQuery(this).closest(".less").prev().stop(true).slideDown("1000");
+        jQuery(this).hide();
+        jQuery('.button-read-less').show();
+    });
+    jQuery('.button-read-less').click(function () {
+        jQuery(this).closest('.less').removeClass('active');
+        jQuery(this).closest(".less").prev().stop(true).slideUp("1000");
+        jQuery('.button-read-more').show();
+        jQuery(this).hide();
+    });
+});
+/* ]]> */
+</script>
+
+
+
+<script>
+
+
+
+    $(document).ready(function(){
+
+            $(document).on("click",".btn_pays", function(e){
+          
+          e.preventDefault();
+
+
+              //var id=$(this).attr("id");
+              var libelle=$("#nom_pays").val();
+              var continent=$("#continent").val();
+                
+              if(confirm("Veuillez confirmer "))
+              if ($.trim(libelle)=="") {
+                         $("#erreur_nom_pays").text("Veuillez renseigner ce champs");
+                     }
+
+                     if ($.trim(continent) == "") {
+                         $("#erreur_continent").text("Veuillez renseigner ce champs");
+                     }
+
+                     if (!$.trim(continent) || !$.trim(libelle) ) {
+                         alert("Veuillez renseigner tous les champs SVP");
+                         return false;
+                     }else{
+                        $("#erreur_continent").text("");
+                        $("#erreur_nom_pays").text("");
+                     }
+
+        
+        $.ajax({
+            type:"POST",
+            dataType:"JSON",
+            url: "{{URL('add_pays/')}}",
+            data: {
+            _token:'{{csrf_token() }}', libelle:libelle,code:continent},
+            success:function (data) {
+                
+                alert(data);
+                $("#nom_pays").val("");
+              $("#continent").val("");
+              location.reload();
+            },
+            error:function (data) {
+                alert(data.responseText);
+            }
+        });
+
+            });    
+
+
+            $(document).on("click",".btn_ville", function(e){
+          
+          e.preventDefault();
+
+
+              //var id=$(this).attr("id");
+              var libelle=$("#nom_ville").val();
+              var id_pays=$("#id_pays_ville").val();
+                
+              if(confirm("Veuillez confirmer"))
+              if ($.trim(libelle)=="") {
+                         $("#erreur_nom_ville").text("Veuillez renseigner ce champs");
+                     }
+
+                     if ($.trim(id_pays) == "") {
+                         $("#erreur_pays").text("Veuillez renseigner ce champs");
+                     }
+
+                     if (!$.trim(id_pays) || !$.trim(libelle) ) {
+                         alert("Veuillez renseigner tous les champs SVP");
+                         return false;
+                     }else{
+                        $("#erreur_nom_ville").text("");
+                        $("#erreur_pays").text("");
+                     }
+
+        
+        $.ajax({
+            type:"POST",
+            dataType:"JSON",
+            url: "{{URL('add_ville/')}}",
+            data: {
+            _token:'{{csrf_token() }}', libelle:libelle,id_pays:id_pays},
+            success:function (data) {
+                
+                alert(data);
+                $("#nom_ville").val("");
+              $("#id_pays_ville").val("");
+              location.reload();
+            },
+            error:function (data) {
+                alert(data.responseText);
+            }
+        });
+
+            });    
+
+
+            $(document).on("click",".btn_departement", function(e){
+          
+          e.preventDefault();
+
+
+              //var id=$(this).attr("id");
+              var libelle=$("#designation_departement").val();
+              var description_departement=$("#description_departement").val();
+                
+              if(confirm("Veuillez confirmer"))
+              if($.trim(libelle)=="") {
+                         $("#erreur_designation_departement").text("Veillez renseigner ce champs");
+                     }
+
+
+                     if (!$.trim(libelle) ) {
+                         alert("Veuillez renseigner tous les champs SVP");
+                         return false;
+                     }else{
+                        $("#erreur_nom_departement").text("");
+                       
+                     }
+
+        
+        $.ajax({
+            type:"POST",
+            dataType:"JSON",
+            url: "{{URL('add_departement/')}}",
+            data: {
+            _token:'{{csrf_token() }}', designation_departement:libelle,description_departement:description_departement},
+            success:function (data) {
+                
+                alert(data);
+                   //var id=$(this).attr("id");
+                $("#designation_departement").val("");
+                $("#description_departement").val("");
+                location.reload();
+                
+            },
+            error:function (data) {
+                alert(data.responseText);
+            }
+        });
+
+            });    
+
+
+            $(document).on("click",".btn_comite", function(e){
+          
+          e.preventDefault();
+
+
+              //var id=$(this).attr("id");
+              var libelle=$("#designation_comite").val();
+              var description_comite=$("#description_comite").val();
+              var id_dep=$("#id_dep").val();
+
+              if(confirm("Veuillez confirmer"))
+              if($.trim(libelle)=="") {
+                         $("#erreur_designation_comite").text("Veillez renseigner ce champs");
+                     }
+
+
+                     if (!$.trim(libelle) ) {
+                         alert("Veuillez renseigner tous les champs SVP");
+                         return false;
+                     }else{
+                        $("#erreur_nom_comite").text("");
+                       
+                     }
+
+        
+        $.ajax({
+            type:"POST",
+            dataType:"JSON",
+            url: "{{URL('add_comite/')}}",
+            data: {
+            _token:'{{csrf_token() }}', designation_comite:libelle,id_dep:id_dep,description_comite:description_comite},
+            success:function (data) {
+                
+                alert(data);
+                
+            },
+            error:function (data) {
+                alert(data.responseText);
+            }
+        });
+
+            });   
+           
+
+
+
+            $(document).on("click",".btn_zone", function(e){
+          
+          e.preventDefault();
+
+
+              //var id=$(this).attr("id");
+              var zone_habitation=$("#zone_habitation").val();
+              var description_zone=$("#description_zone").val();
+              var id_eglise_zone=$("#id_eglise_zone").val();
+           
+                   if($.trim(zone_habitation)=="") {
+                         $("#erreur_zone_habitation").text("Veuillez renseigner ce champs");
+                         return false;
+                     }
+
+                    
+
+     if(confirm("Veuillez confirmer"))
+        $.ajax({
+            type:"POST",
+            dataType:"JSON",
+            url: "{{URL('add_zone/')}}",
+            data: {_token:'{{csrf_token() }}',id_eglise_zone:id_eglise_zone,description_zone:description_zone,zone_habitation:zone_habitation},
+            success:function(data) {
+                
+                alert(data);
+                $("#zone_habitation").val("");
+              $("#description_zone").val("");
+              $("#id_eglise_zone").val("");
+              
+             
+            },
+            error:function (data) {
+                alert(data.responseText);
+            }
+        });
+
+            });    
+
+
+
+            $(document).on("click",".btn_ethnie", function(e){
+          
+          e.preventDefault();
+
+
+              //var id=$(this).attr("id");
+              var nom_ethnie=$("#nom_ethnie").val();
+              var description_ethnie=$("#description_ethnie").val();
+                
+              if(confirm("Veuillez confirmer"))
+              if ($.trim(nom_ethnie)=="") {
+                         $("#erreur_nom_ethnie").text("Veuillez renseigner ce champs");
+                     }
+
+                     
+
+                     if (!$.trim(nom_ethnie) ) {
+                         alert("Veuillez renseigner tous les champs SVP");
+                         return false;
+                     }else{
+                        $("#erreur_nom_ethnie").text("");
+                        
+                     }
+
+        
+        $.ajax({
+            type:"POST",
+            dataType:"JSON",
+            url: "{{URL('add_ethnie/')}}",
+            data: {_token:'{{csrf_token() }}',nom_ethnie:nom_ethnie,description_ethnie:description_ethnie},
+            success:function(data) {
+                
+                alert(data);
+                $("#nom_ethnie").val("");
+              $("#description_ethnie").val("");
+              location.reload();
+            },
+            error:function (data) {
+                alert(data.responseText);
+            }
+        });
+
+            });    
+
+
+
+            $(document).on("click",".btn_tribu", function(e){
+          
+          e.preventDefault();
+
+
+              //var id=$(this).attr("id");
+              var nom_tribu=$("#nom_tribu").val();
+              var description_tribu=$("#description_tribu").val();
+                
+             
+
+              if(confirm("Veuillez confirmer"))
+              if ($.trim(nom_tribu)=="") {
+                         $("#erreur_nom_tribu").text("Veuillez renseigner ce champs");
+                     }
+
+                     
+
+                     if (!$.trim(nom_tribu) ) {
+                         alert("Veuillez renseigner le nom d'une tribu  SVP");
+                         return false;
+                     }else{
+                        $("#erreur_nom_tribu").text("");
+                       
+                     }
+
+        
+        $.ajax({
+            type:"POST",
+            dataType:"JSON",
+            url: "{{URL('add_tribu/')}}",
+            data: {_token:'{{csrf_token() }}',nom_tribu:nom_tribu,description_tribu:description_tribu},
+            success:function(data) {
+                
+                alert(data);
+             $("#nom_tribu").val("");
+           $("#description_tribu").val("");
+                
+            $("#id_eglise_tribu").val("");
+            location.reload();
+
+            },
+            error:function (data) {
+                alert(data.responseText);
+            }
+        });
+
+            });    
+
+
+            $(document).on("click",".btn_profession", function(e){
+          
+          e.preventDefault();
+
+
+              //var id=$(this).attr("id");
+              var designation=$("#designation_profession").val();
+             
+              if(confirm("Veuillez confirmer"))
+              if ($.trim(designation)=="") {
+                         $("#erreur_designation_profession").text("Veillez renseigner ce champs");
+                     }
+
+                     
+
+                     if (!$.trim(designation)) {
+                         alert("Veuillez renseigner tous les champs SVP");
+                         return false;
+                     }else{
+                        $("#erreur_designation_profession").text("");
+                     
+                     }
+
+        
+        $.ajax({
+            type:"POST",
+            dataType:"JSON",
+            url: "{{URL('add_profession/')}}",
+            data: {_token:'{{csrf_token()}}',designation:designation},
+            success:function(data) {
+                
+                alert(data);
+                $("#designation_profession").val("");
+                location.reload();
+            },
+            error:function (data) {
+                alert(data.responseText);
+            }
+        });
+
+            });    
+         
+
+
+            $(document).on("click",".btn_hotel", function(e){
+          
+            e.preventDefault();
+
+
+              //var id=$(this).attr("id");
+              var nom_hotel=$("#nom_hotel").val();
+              var id_ville_hotel=$("#id_ville_hotel").val();
+              var description_hotel=$("#description_hotel").val();
+              var confort=$("confort").val();
+
+              if(confirm("Veuillez confirmer"))
+              if ($.trim(id_ville_hotel)=="") {
+                         $("#erreur_id_ville_hotel").text("Veuillez renseigner ce champs");
+                     }
+
+                     if ($.trim(nom_hotel)=="") {
+                         $("#erreur_nom_hotel").text("Veuillez renseigner ce champs");
+                     }
+
+                     if (!$.trim(nom_hotel)) {
+                         alert("Veuillez renseigner tous les champs SVP");
+                         return false;
+                     }else{
+                        $("#erreur_designation_profession").text("");
+                     
+                     }
+
+        
+        $.ajax({
+            type:"POST",
+            dataType:"JSON",
+            url: "{{URL('add_hotel/')}}",
+            data: {_token:'{{csrf_token()}}',confort:confort,id_ville_hotel:id_ville_hotel,nom_hotel:nom_hotel,description_hotel:description_hotel},
+            success:function(data) {
+                
+                alert(data);
+              
+           $("#nom_hotel").val("");
+           $("#id_ville_hotel").val("");
+           $("#description_hotel").val("");
+           $("#confort").val("");
+            location.reload();
+                
+            },
+            error:function (data) {
+                alert(data.responseText);
+            }
+        });
+
+            });    
+         
+
+            $(document).on("click",".btn_eglise", function(e){
+          
+          e.preventDefault();
+
+
+              //var id=$(this).attr("id");
+              var nom_eglise=$("#nom_eglise").val();
+              var description_eglise=$("#description_eglise").val();
+              var statut=$("#statut").val();
+              var dependance_eglise=$("#dependance_eglise").val();
+
+              var id_ville_eglise=$("#id_ville_eglise").val();
+                
+              if(confirm("Veuillez confirmer"))
+              if ($.trim(nom_eglise)=="") {
+                         $("#erreur_nom_eglise").text("Veuillez renseigner ce champs");
+                     }
+
+                     if ($.trim(id_ville_eglise) == "") {
+                         $("#erreur_id_ville_eglise").text("Veuillez renseigner ce champs");
+                     }
+
+                     if ($.trim(statut) == "") {
+                         $("#erreur_statut").text("Veuillez renseigner ce champs");
+                     }
+
+                     if (!$.trim(id_ville_eglise) || !$.trim(nom_eglise ||  !$.trim(statut)) ) {
+                         alert("Veuillez renseigner tous les champs SVP");
+                         return false;
+                     }else{
+                        $("#erreur_nom_eglise").text("");
+                        $("#erreur_id_ville_eglise").text("");
+                        $("#erreur_statut").text("");
+                     }
+
+        
+        $.ajax({
+            type:"POST",
+            dataType:"JSON",
+            url: "{{URL('add_eglise/')}}",
+            data: {_token:'{{csrf_token() }}',nom_eglise:nom_eglise,description_eglise:description_eglise,id_ville_eglise:id_ville_eglise,statut:statut,nom_eglise_mere:dependance_eglise},
+            success:function(data) {
+                
+                alert(data);
+
+                $("#nom_eglise").val("");
+              $("#description_eglise").val("");
+              $("#statut").val("");
+              $("#dependance_eglise").val("");
+             $("#id_ville_eglise").val("");
+             location.reload();
+            },
+            error:function (data) {
+                alert(data.responseText);
+            }
+        });
+
+            });    
+
+
+            $(document).on("click",".btn_chambre", function(e){
+          
+          e.preventDefault();
+
+
+              var batiment=$("#batiment").val();
+              var designation_chambre=$("#designation_chambre").val();
+             var formule=$("#formule").val();
+             var description_chambre=$("#description_chambre").val();
+            
+             var prix_unite_ttc=$("#prix_unitaire_ttc").val();
+             var nb_place=$("#nb_place").val();
+             var id_hotel=$("#id_chambre_hotel").val();
+
+            if(confirm("Veuillez confirmer")){
+            if ($.trim(formule)=="") {
+                       $("#erreur_formule").text("Veuillez renseigner ce champs");
+                   }
+
+                   if ($.trim(id_hotel)=="") {
+                       $("#erreur_id_chambre_hotel").text("Veuillez renseigner ce champs");
+                   }
+
+
+                   if ($.trim(prix_unite_ttc)=="") {
+                       $("#erreur_prix_unite_ttc").text("Veuillez renseigner ce champs");
+                   }
+
+                   if (!$.trim(batiment) || !$.trim(formule) || !$.trim(id_hotel) || !$.trim(prix_unite_ttc) || !$.trim(designation_chambre)) {
+                       alert("Veuillez renseigner tous les champs étoilés svp");
+                       return false;
+                   }else{
+                      
+                   }
+
+      $.ajax({
+          type:"POST",
+          dataType:"JSON",
+          url: "{{URL('add_chambre/')}}",
+          data: {_token:'{{csrf_token()}}',batiment:batiment,designation:designation_chambre,id_hotel:id_hotel,formule:formule,description_chambre:description_chambre,prix_unitaire_ttc:prix_unite_ttc,nb_place:nb_place},
+          success:function(data) {
+              
+              alert(data);
+            
+              $("#formule").val("");
+             $("#description_chambre").val("");
+             $("#prix_unitaire_ttc").val("");
+           $("#nb_place").val("");
+             $("#id_chambre_hotel").val("");
+               $("#batiment").val("");
+               $("#designation_chambre").val("");
+              
+          },
+          error:function (data) {
+              alert(data.responseText);
+          }
+      });
+    }
+          });    
+       
+       
+    });
+</script>
+

@@ -1,0 +1,219 @@
+
+
+
+   
+                
+            <section class=" background-11   text-center" style="background-image:url(assets/images/);">
+            <div class="container y-0">
+
+                <div class="row  h-full align-items-cente" >
+              
+                       <div class="col-lg-12 col-md-12">
+                                <div class="row from-group">
+                              
+                                   
+
+                                    <div class="col-md-9 col-sm-12 col-xs-12">
+                                  
+                                    <input type="text"  style="font-size:1em; font-weight:bold; border-radius:14px;" [(ngModel)]="titre" name="titre"   class="form-control annee_retaite text-center" placeholder="Ecrivez..." id="motcle"  />
+                                   
+                                    </div>
+
+
+                                    <div class="col-md-3 col-sm-12 col-xs-12">
+                                        <input type="button" style="font-size:1em; border-radius:14px;" id="search_btn" (click)="recherche(titre)" name="submit" class="submit btn btn-warning col-md-12 col-sm-12 col-xs-12" value="RECHERCHER" />
+                                     
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="col-lg-12 col-md-12" style="margin-top:5%!important;"> 
+                            <p class="text-center text-dark" style="font-size:2em;" id="nb_ame">  CHANTS ET PARTITIONS</p>
+                            
+                            <div class="container">
+
+                            <div class="row" id="mon_boss">
+                               <!--<span *ngIf="!display">{{repertoire | json}} </span>-->
+                             
+                               
+                            <div class="col-sm-6 " *ngFor="let rep of repertoire">
+                                <div class="card bg-dark text-light" >
+                                    <div class="card-body">
+                                        <div class="row"  >
+
+                                            
+                                            
+                                             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 table-responsi">
+                                                <table class="table text-center" style="text-align:lef!important;">  
+                                                    <tr>
+                                                       
+                                                         <td class="text-truncate text-wrap badge badge-warnin"><p>{{rep.titreRepertoire}} ; {{rep?.livreRepertoire}}<span *ngIf="rep?.referenceRepertoire!=null">  N°</span>  {{rep?.referenceRepertoire}}</p></td>     
+                                                     </tr>
+                                                    
+                                                     
+                                                     <tr>
+                                                        
+                                                         
+                                                         
+                                                          <td class="text-truncate text-wrap badge badge-warnin text-dark parole"  >
+                                                            <div  class="parole2" [innerHTML]="rep.paroleChant"> 
+                                                            
+                                                            </div>
+
+                                                   
+                                                            <!--Nous demandons de comprendre le html qui se trouve dans le texte--> 
+                                                          </td>     
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                       
+                                                        <td><img src="assets/images/news-1.jpg" width="50"></td>
+                                                      </tr>
+                                                  
+                                               
+                                                    
+                                                         </table>
+                                                         </div> 
+                                                        </div>
+                                                   </div></div>
+                                                     
+
+                                                       
+                                                        </div>
+                                                 
+                                                
+                                             
+ 
+                 </div><!--/.row-->
+                </div><!--/.container-->
+                </div>
+
+
+            </div><!--/.row-->
+                </div><!--/.container-->
+            
+            </section>
+                
+               
+
+
+
+
+           
+
+
+            <div class="modal fade" id="afficher_message" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <!--Modal d'affichage de message-->
+              <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">MESSAGE</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="message text-center" Style="font-size:1.5em !important; font-weight:bold;">
+                      
+                    </div> 
+                    </div>
+                   <div class="modal-footer">
+                   
+                    </div>
+                  </div>
+                </div>
+               </div>
+
+
+ 
+ <div class="modal fade" id="traitement_en_cours" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <!--Modal d'affichage de chargement en cours-->
+  <div class="modal-dialog modal-xs modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLongTitle"> En cours...  </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    
+    </div>
+  </div>
+ </div>
+ 
+
+
+
+  
+
+
+
+
+
+  <script>
+   /* 
+   $(document).ready(function(){
+  
+
+
+
+$(document).on("click", "#search_btn", function(){
+
+
+var motcle=$.trim($("#motcle").val());
+
+        
+        if(!motcle){
+         alert("Veuillez ecrire un mot");
+        return false;
+        }
+
+       
+        $.ajax({
+        type:"POST",
+        url:"{{URL('retrouver')}}",
+        data:{motcle:motcle},
+        dataType:"JSON",
+        success:function(jsondata) {
+            var body = '';
+            if (jsondata != "" && jsondata != "Exception") {
+ 
+               var cpt=0;
+                for (i in jsondata) {
+                    if(jsondata[i].SEXE=="Homme"){
+                    body += '<div class="col-sm-4"><div class="card"><div class="card-body"><div class="row"><div class="col-md-12 col-lg-12 col-sm-12 col-xs-12  bg-warning text-cente"><img src="../images/avatar.png" width = "15%" />  <b> ' + jsondata[i].NOM + ' ' + jsondata[i].PRENOMS + '</b></div>   <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 table-responsive"><table class="tabl" style="text-align:left!important;"> <tr><th>Genre</th><td>Homme</td></tr>    <tr> <th>Comité:</th><td>' + jsondata[i].nom_com+ '</td></tr>    <th>Role à l\'eglise:</th>    <td>' + jsondata[i].role_dans_eglise + '</td>        </tr> </tr>    <th>Deplacement:</th>    <td>' + jsondata[i].moyen_deplacement + '</td>        </tr></table> </div> </div>  </div></div></div>';
+                    }else if(jsondata[i].SEXE=="Femme"){
+                    body += '<div class="col-sm-4"><div class="card"><div class="card-body"><div class="row"><div class="col-md-12 col-lg-12 col-sm-12 col-xs-12  bg-warning text-cente"><img src="images/avatafemme.png" width = "15%" />  <b> ' + jsondata[i].NOM + ' ' + jsondata[i].PRENOMS + '</b></div>   <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 table-responsive"><table class="tabl" style="text-align:left!important;">  <tr><th>Genre</th><td>Femme</td></tr>   <tr> <th>Comité:</th><td>' + jsondata[i].nom_com+ '</td></tr>    <tr> <th>Role à l\'église:</th>    <td>' + jsondata[i].role_dans_eglise + '</td>        </tr> </tr>    <th>Deplacement:</th>    <td>' + jsondata[i].moyen_deplacement + '</td>        </tr> </table> </div> </div>  </div></div></div>';
+                    }else{
+
+                    }
+                    cpt++;
+                }
+                
+                if(body!=""){
+                $("#nb_ame").text(cpt+' inscrit(s) trouvé(s)');
+                $("#mon_boss").html(body);
+                }else{
+                $("#nb_ame").text("Aucun inscrit ne correspond à la recherche");
+                $("#mon_boss").html(body);
+                }
+                //$(".chargement").modal("hide");
+            }else{
+                $("#nb_ame").text('');
+                body+='<div class="text-danger col-12 text-center">Aucun inscrit ne correspond à la recherche.</div>';
+                $("#mon_boss").html(body);
+            }
+
+        }
+    });
+
+
+});
+
+
+
+});*/
+
+</script>
+
+
